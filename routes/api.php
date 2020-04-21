@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+// Plant Map Route
+Route::get('test', function (App\Area $area) { return $area->all(); }); 

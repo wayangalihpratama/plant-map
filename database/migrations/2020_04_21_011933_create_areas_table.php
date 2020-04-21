@@ -15,11 +15,11 @@ class CreateAreasTable extends Migration
     {
         Schema::create('areas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('location_id');
-            $table->string('name');
+            $table->string('name')->unique();
             $table->point('geometry');
+            $table->foreignId('location_id');
             $table->timestamps();
-            $table->softDeletes('deleted_at', 0);
+            $table->softDeletes();
         });
 
         Schema::table(
