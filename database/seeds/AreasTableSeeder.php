@@ -31,7 +31,7 @@ class AreasTableSeeder extends Seeder
     {
         $locations = Location::whereNotNull('parent_id')->get();
         foreach ($locations as $location) {
-            for ($i = 0; $i < $faker->numberBetween(115, 120); $i++) {
+            for ($i = 0; $i < $faker->numberBetween(50, 100); $i++) {
                 $name = $this->checkUnique($faker, 'name', $this->savedNames);
                 $lat = $this->checkUnique($faker, 'lat', $this->savedLat);
                 $lng = $this->checkUnique($faker, 'lng', $this->savedLng);

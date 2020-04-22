@@ -19,6 +19,11 @@ class Tree extends Model
 
     public function areas()
     {
-        return $this->belongsToMany('App\Area');
+        return $this->belongsToMany('App\Area', 'area_trees')->withPivot('id', 'age');
+    }
+
+    public function areaTrees()
+    {
+        return $this->hasMany('App\AreaTree');
     }
 }

@@ -21,7 +21,7 @@ class AreaTreesTableSeeder extends Seeder
         $areas = $area->all();
         
         foreach ($areas as $plantation) {
-            factory(AreaTree::class, $faker->numberBetween(10, 25))->create(
+            factory(AreaTree::class, $faker->numberBetween(5, 15))->create(
                 [
                     'tree_id' => $trees->random(),
                     'area_id' => $plantation->id

@@ -14,6 +14,7 @@ class Area extends Model
     protected $hidden = ['created_at', 'updated_at', 'deleted_at'];
     protected $fillable = ['name', 'location_id'];
     protected $spatialFields = ['geometry'];
+    protected $appends = ['tree_count'];
 
     public function location()
     {
@@ -22,6 +23,16 @@ class Area extends Model
 
     public function trees()
     {
-        return $this->belongsToMany('App\Tree');
+        return $this->belongsToMany('App\Tree', 'area_trees')->withPivot('id', 'age');
+    }
+
+    public function areaTrees()
+    {
+        return $this->hasMany('App\AreaTree');
+    }
+
+    public function getTreeCountAttribute()
+    {
+        return $this->trees()->count();
     }
 }

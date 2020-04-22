@@ -10,7 +10,7 @@ $factory->define(
         return [
             'tree_id' => null,
             'area_id' => null,
-            'age' => $faker->numberBetween($min = 1, $max = 53)
+            'age' => $faker->numberBetween($min = 1, $max = 48)
         ];
     }
 );

@@ -26,7 +26,7 @@ class LocationsTableSeeder extends Seeder
 
     public function seedParent($faker)
     {
-        for ($i = 0; $i < $faker->numberBetween(5, 6); $i++) {
+        for ($i = 0; $i < $faker->numberBetween(2, 3); $i++) {
             $parents = $this->checkUnique(null, 1, $faker);
         } 
     }
