@@ -26,8 +26,11 @@
   <link rel="stylesheet" href="{{url('adminlte/plugins/summernote/summernote-bs4.css')}}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{{url('adminlte/plugins/select2/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{url('adminlte/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css')}}">
 </head>
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
   <div class="wrapper">
     <!-- Navbar -->
     @include('layouts.header')
@@ -85,14 +88,21 @@
   <script src="{{url('adminlte/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
   <!-- AdminLTE App -->
   <script src="{{url('adminlte/dist/js/adminlte.js')}}"></script>
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  <!-- <script src="{{url('adminlte/dist/js/pages/dashboard.js')}}"></script> -->
-  <!-- AdminLTE for demo purposes -->
-  <!-- <script src="{{url('adminlte/dist/js/demo.js')}}"></script> -->
+  <!-- Select2 -->
+  <script src="{{url('adminlte/plugins/select2/js/select2.full.min.js')}}"></script>
 
   <!-- webpack -->
   <script src="{{ mix('js/app.js') }}"></script>
-
+  <!-- echarts CDN -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/dataTool.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/china.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/map/js/world.js"></script>
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/extension/bmap.min.js"></script>
+  
   @section('js')
 
   @show

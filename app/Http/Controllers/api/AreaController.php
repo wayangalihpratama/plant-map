@@ -12,6 +12,6 @@ class AreaController extends Controller
 {
     public function index(Area $area, CarbonHistory $carbonHistory)
     {
-        return $area->with('areaTrees')->paginate(50);
+        return $area->with('areaTrees')->with('areaTrees.tree')->paginate(50);
     }
 }

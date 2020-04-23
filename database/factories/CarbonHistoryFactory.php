@@ -10,7 +10,7 @@ $factory->define(
         return [
             'area_tree_id' => null,
             'carbon' => $faker->randomFloat($nbMaxDecimals = 2, $min = 10, $max = 99),
-            'created_at' => $faker->dateTimeBetween($startDate = '-30 years', $endDate = 'now', $timezone = null)
+            'created_at' => $faker->dateTimeBetween($startDate = '-5 years', $endDate = 'now', $timezone = null)
         ];
     }
 );

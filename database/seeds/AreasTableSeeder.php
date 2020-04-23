@@ -57,11 +57,11 @@ class AreasTableSeeder extends Seeder
     {
         $data = $faker->streetName . ' ' . $faker->buildingNumber();
         if ($flag === 'lat') {
-            $data = $faker->latitude($min = -90, $max = 90);
+            $data = $faker->latitude($min = -45, $max = 45);
         }
 
         if ($flag === 'lng') {
-            $data = $faker->longitude($min = -180, $max = 180);
+            $data = $faker->longitude($min = -90, $max = 90);
         }
 
         if ($collection->contains($data)) {
